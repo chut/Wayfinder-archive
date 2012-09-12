@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- OVERLAY ATTEMPT -->
+  <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/mainFrame"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+<RelativeLayout 
+    	android:id="@+id/overLayout"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent">
+      <ImageView
+        android:id="@+id/overlayPic"
+        android:layout_width="wrap_content"
+       android:layout_height="wrap_content" 
+       android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/tabhost" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+
+			    
+	<RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent">
+		
+			<TabWidget android:id="@android:id/tabs"
+			    android:layout_alignParentBottom="true"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" />
+	    
+		<FrameLayout android:id="@android:id/tabcontent"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:layout_above="@android:id/tabs">
+			
+	
+			
+			
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pathTab"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	
+    <com.MGHWayFinder.PathView 
+        android:id="@+id/pathView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    
+   
+   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buttons"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true" >
+
+     <Button
+        android:id="@+id/btnPrev"
+      	android:layout_width="60dp"
+       	android:layout_height="wrap_content" 
+       	android:layout_alignParentLeft="true"
+       	android:layout_alignParentBottom="true"
+       	android:text="Prev     "
+       	android:textColor="#ffffffff"
+       	android:textSize="10sp"/>    	     		    	    
+    	   	<Button
+       android:id="@+id/btnNext"
+      	android:layout_width="60dp"
+      	android:layout_height="wrap_content"
+      	android:layout_alignParentRight="true"
+      	android:layout_alignParentBottom="true"
+      	android:text="      Next"
+      	android:textColor="#ffffffff"
+      	android:textSize="10sp"
+       	 />
+        <!-- prob dont need these 	
+ 	     <TextView
+       android:id="@+id/tvX"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_toRightOf="@id/btnNext"
+       android:textColor="#000000" />
+ 	     
+    	<TextView
+       android:id="@+id/tvY"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_toRightOf="@id/tvX"
+       android:textColor="#000000" />
+ 	 -->
+ 	 
+ 	 <Button
+        android:id="@+id/btnHelp"
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:layout_alignParentRight="true"
+       	android:layout_alignParentTop="true"
+       	android:text="Call For Help" />	
+       	
+    	 
+       	<Button
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:layout_centerHorizontal="true"
+       	android:layout_alignParentBottom="true"
+       	android:textColor="#ffffffff"
+       	android:text="View Picture" />
+       	
+       	<ImageView 
+       	    android:id="@+id/compassImage"
+       	    android:layout_width="wrap_content"
+       	    android:layout_height="wrap_content"
+       	    android:layout_alignParentLeft="true"
+       	    android:layout_alignParentTop="true"
+       	    android:src="@drawable/compass_edited_small"/>	
+       	
+       	
+    </RelativeLayout>
+     
+</RelativeLayout>
+<!-- tab2 list view -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listTab"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+   
+		<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buttons2"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    	    	<TextView
+       android:id="@+id/tvLVTitle"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="#ffffff"
+       android:textSize="30sp"
+       android:text="Directions List:" />
+    	    	
+
+		</RelativeLayout>
+
+       <ListView 
+   		android:id="@android:id/list"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true"
+        android:layout_below="@id/buttons2"
+  		  />
+
+       </RelativeLayout>
+   
+
+<!-- closers -->
+
+		</FrameLayout>
+	</RelativeLayout>
+	
+</TabHost>
+</FrameLayout>
