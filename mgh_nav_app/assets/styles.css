@@ -1,0 +1,18 @@
+﻿/* CSS layout */
+body {
+	margin: 0;
+	padding: 0;
+	background-color:black
+}
+
+h1{
+	text-align:center;
+	color:white
+	}
+p{
+	color:white;
+}
+
+img{
+	text-align:center;
+}

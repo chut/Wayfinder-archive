@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/titlefont1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center"
+                android:layout_weight=".60"
+                android:gravity="center_vertical|center"
+                android:padding="0dp"
+                android:text="MGH-Nav"
+                android:textSize="40sp"
+                android:typeface="monospace" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight=".40"
+                android:contentDescription="MGH Logo"
+                android:padding="5dp"
+                android:src="@drawable/mgh" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fillerRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- List Input Field -->
+
+
+            <!-- set invisible until search functionality works -->
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:autoText="true"
+                android:hint="Search..."
+                android:visibility="visible" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- Actual List -->
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000"
+                android:drawSelectorOnTop="false" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

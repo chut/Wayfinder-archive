@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gesture-image="http://schemas.polites.com/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/previousButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Previous" />
+
+            <ImageView
+                android:id="@+id/direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="5px" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Next" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+
+        <!--  relative layout is used to overlay the sliding drawer on top of the GestureImageView  -->
+        <RelativeLayout>
+
+            <com.polites.android.GestureImageView
+                android:id="@+id/map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/floor1"
+                gesture-image:max-scale="10.0"
+                gesture-image:min-scale="0.75" />
+
+            <SlidingDrawer
+                android:id="@+id/slidingDrawer1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:content="@+id/content"
+                android:handle="@+id/handle" >
+
+                <Button
+                    android:id="@+id/handle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/ButtonText"
+                    android:textSize="20dp"
+                    android:padding="2dp"
+                    android:text="Direction Image" />
+
+                <LinearLayout
+                    android:id="@+id/content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <!--  imageView is used to disable the functionality of pinch to zoom on the photo -->
+                    <ImageView
+                        android:id="@+id/imagedirection"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        />
+                    
+                    
+                </LinearLayout>
+            </SlidingDrawer>
+        </RelativeLayout>
+    </TableLayout>
+
+</LinearLayout>

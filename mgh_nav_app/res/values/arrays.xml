@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string-array name="elevatorstairs">
+        <item name="elevator">Elevator</item>
+        <item name="stairs">Stairs</item>
+    </string-array>
+    
+    <string-array name="elevatorstairsvalues">
+        <item name="elevator">elevator</item>
+        <item name="stairs">stairs</item>
+    </string-array>
+
+</resources>

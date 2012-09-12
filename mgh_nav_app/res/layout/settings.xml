@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ListPreference
+        android:name="Floor Change Preference"
+        android:defaultValue="elevator"
+        android:entries="@array/elevatorstairs"
+        android:entryValues="@array/elevatorstairsvalues"
+        android:key="elevatorstairspreference"
+        android:summary="This preference sets whether you prefer to take the stairs or the elevator. The default is elevator."
+        android:title="Floor Change Preference" />
+
+    <CheckBoxPreference
+        android:name="Enable Speech"
+        android:defaultValue="true"
+        android:key="speakEnabled"
+        android:summary="Use this to enable or disable speaking directions in the map."
+        android:title="Enable Speak" />
+    
+    <CheckBoxPreference
+        android:name="Enable Lost Shake"
+        android:defaultValue="true"
+        android:key="enableShake"
+        android:summary="Use this to enable or disable the shake option to return to the main screen and re-enter the starting location"
+        android:title="Enable Shake" />
+
+    
+</PreferenceScreen> 

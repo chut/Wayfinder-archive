@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="85dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/titlefont"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".60"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="MGH"
+            android:textSize="60sp"
+            android:typeface="monospace" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".40"
+            android:contentDescription="MGH Logo"
+            android:padding="10dp"
+            android:src="@drawable/mgh" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/startBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="@string/start"
+        android:textAppearance="@string/start"
+        android:textColor="#FFFFFFFF"
+        android:textSize="30sp" />
+
+    <!-- Nick, is this way of fixing the buttons okay? EG: xdp for height? -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/startText"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".50"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="Room Foo"
+            android:textColor="#FF000000"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/scanStartButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="0dp"
+            android:layout_weight=".25"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Scan" />
+
+        <Button
+            android:id="@+id/listStartButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".25"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="List" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/endBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Start Location"
+        android:textColor="#FFFFFFFF"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/endText"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".50"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="Room Foo"
+            android:textColor="#FF000000"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/listEndButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".25"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="List" />
+    </LinearLayout>
+
+    <!-- Go Button -->
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/ButtonText"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Go!" />
+
+</LinearLayout>

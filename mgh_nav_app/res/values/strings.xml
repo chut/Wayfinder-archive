@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="start"><U>Start Location</U></string>
+    <string name="app_name">NavMGH</string>
+    
+    
+    <style name="ButtonText">
+    <item name="android:textColor">#FFFFFF</item>
+    <item name="android:layout_margin">3dp</item>
+    <item name="android:textSize">30dp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:background">@drawable/button</item>
+    
+	</style>
+
+</resources>
