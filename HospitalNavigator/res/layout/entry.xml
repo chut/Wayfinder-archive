@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/blue"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <!-- Search Code Tab -->
+
+            <LinearLayout
+                android:id="@+id/Search"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+                
+				<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#cccccc"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="10"
+                        android:background="#666666"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/searchSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:src="@drawable/switch48" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/searchStartText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:text="Start:"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/searchEndText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="left"
+                            android:text="End:"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+                
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" 
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="0dp"
+                            android:background="#000000"
+                            android:gravity="center"
+                            android:text="Start Location"
+                            android:textColor="#ffffff"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:text="Filter by Floor"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/startByFloorSpinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:drawSelectorOnTop="true"
+                            android:prompt="@string/spinner_byFloor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:text="Filter by Location Type"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/startByTypeSpinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:drawSelectorOnTop="true"
+                            android:prompt="@string/spinner_byType" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:text="Select your Start Location"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/startRoomListSpinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:drawSelectorOnTop="true"
+                            android:prompt="@string/spinner_start" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:background="#000000"
+                            android:gravity="center"
+                            android:text="End Location"
+                            android:textColor="#ffffff"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:text="Filter by Floor"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/endByFloorSpinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:drawSelectorOnTop="true"
+                            android:prompt="@string/spinner_byFloor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:text="Filter by Location Type"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/endByTypeSpinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:drawSelectorOnTop="true"
+                            android:prompt="@string/spinner_byType" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:text="Select your End Location"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/endRoomListSpinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:drawSelectorOnTop="true"
+                            android:prompt="@string/spinner_end" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#666666"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <Button
+                        android:id="@+id/searchNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@layout/greenbuttonshape"
+                        android:padding="5dp"
+                        android:text="  Go  "
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/searchClear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@layout/buttonshape"
+                        android:padding="5dp"
+                        android:text="  Clear  "
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+                
+            </LinearLayout>>
+
+            <!-- Enter Code Tab -->
+
+            <LinearLayout
+                android:id="@+id/Enter"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+				<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#cccccc"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="10"
+                        android:background="#666666"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/enterSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:src="@drawable/switch48" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/enterStartText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:text="Start:"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/enterEndText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="left"
+                            android:text="End:"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" 
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="30dp"
+                            android:text="Start Location"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/startRoomText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="Room#, exit, bathroom, etc"
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:text="End Location"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/endRoomText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="40dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="Room#, exit, bathroom, etc"
+                            android:textColor="#000000" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#666666"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <Button
+                        android:id="@+id/enterNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@layout/greenbuttonshape"
+                        android:padding="5dp"
+                        android:text="  Go  "
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+                    <Button
+                        android:id="@+id/enterClear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@layout/buttonshape"
+                        android:padding="5dp"
+                        android:text="  Clear  "
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+            </LinearLayout>>
+
+            <!-- QR Reader Tab -->
+
+            <LinearLayout
+                android:id="@+id/QR"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+				
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#cccccc"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="10"
+                        android:background="#666666"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/scanSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:src="@drawable/switch48" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/scanStartText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:text="Start:"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/scanEndText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="left"
+                            android:text="End:"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+                
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/ScanStartButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="70dp"
+                            android:background="@layout/buttonshape"
+                            android:padding="10dp"
+                            android:text="Scan QR Code"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                        
+						<ImageView 
+						    android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"                    
+                            android:src="@drawable/qrcode125" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#666666"
+                    android:orientation="horizontal" 
+                    android:padding="5dp">
+
+                    <Button
+                        android:id="@+id/scanNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@layout/greenbuttonshape"
+                        android:padding="5dp"
+                        android:text="  Go  "
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+                    <Button
+                        android:id="@+id/scanClear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@layout/buttonshape"
+                        android:padding="5dp"
+                        android:text="  Clear  "
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+                
+            </LinearLayout>>
+            <!-- Map View Tab -->
+
+            <LinearLayout
+                android:id="@+id/mapView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+				<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#cccccc"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="10"
+                        android:background="#666666"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/mapSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:src="@drawable/switch48" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/mapStartText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:text="Start:"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/mapEndText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="left"
+                            android:text="End:"
+                            android:textColor="#000000"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1">
+	                <LinearLayout
+	                    android:id="@+id/progresslayout"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:background="@drawable/rounded_corners_darkgray"
+	                    android:orientation="vertical"
+	                    android:padding="10dp" >
+	
+	                    <ProgressBar
+	                        android:id="@+id/webprogress"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content" >
+	                    </ProgressBar>
+	
+	                    <TextView
+	                        android:id="@+id/webprogresstext"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="Loading..." />
+	                </LinearLayout>
+	
+	                <com.cs460402.activities.NavWebView
+	                    android:id="@+id/webView"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:focusable="true"
+	                    android:visibility="invisible" />
+				</RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#666666"
+                    android:orientation="horizontal" 
+                    android:padding="5dp">
+
+                    <Button
+                        android:id="@+id/mapNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@layout/greenbuttonshape"
+                        android:padding="5dp"
+                        android:text="  Go  "
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+                    <Button
+                        android:id="@+id/mapFloor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@layout/buttonshape"
+                        android:padding="5dp"
+                        android:text="  Floor  "
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+                    <Button
+                        android:id="@+id/mapPOI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@layout/bluebuttonshape"
+                        android:padding="5dp"
+                        android:text="  Filter  "
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+                
+            </LinearLayout>>
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>

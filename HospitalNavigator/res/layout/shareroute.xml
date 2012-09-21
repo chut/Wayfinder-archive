@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#cccccc"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="10"
+            android:background="#666666"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/shareSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:src="@drawable/switch48" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/shareStartText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="Start:"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/shareEndText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="left"
+                android:text="End:"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/gradiant_background_blue" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+			
+            <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_margin="30dp"
+                  android:gravity="center"
+                  android:text="Share your route information with others!"
+                  android:textColor="#000000"
+                  android:textSize="20dp"
+                  android:textStyle="bold" />
+            
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+	            <EditText 
+	                android:id="@+id/shareEdit"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:layout_marginBottom="0dp"
+	                android:layout_marginLeft="30dp"
+	                android:layout_marginRight="0dp"
+	                android:layout_marginTop="0dip"
+	                android:hint="Enter code from msg"
+	                />
+	            <Button
+				      android:id="@+id/shareGo"
+				      android:layout_width="wrap_content"
+				      android:layout_height="wrap_content"
+				      android:layout_marginRight="30dp"
+				      android:layout_marginBottom="0dp"
+	                android:layout_marginLeft="0dp"
+				      android:layout_marginTop="0dp"
+				      android:background="@layout/greenbuttonshape"
+				      android:padding="5dp"
+				      android:text="  Go  "
+				      android:textColor="#FFFFFF"
+				      android:textSize="20dp"
+				      android:textStyle="bold"/>
+			</LinearLayout>
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+	            
+	            <ImageButton
+				      android:id="@+id/shareSMS"
+				      android:layout_width="wrap_content"
+				      android:layout_height="wrap_content"
+				      android:layout_margin="30dp"
+				      android:background="@drawable/sms72"/>
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textColor="#000000"
+	                android:textSize="18dp"
+	                android:text="Send via SMS text"
+	                />
+			</LinearLayout>
+			<LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+	            
+	            <ImageButton
+				      android:id="@+id/shareEmail"
+				      android:layout_width="wrap_content"
+				      android:layout_height="wrap_content"
+				      android:layout_marginLeft="30dp"
+				      android:layout_marginRight="30dp"
+				      android:background="@drawable/mail72"/>
+	             <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textColor="#000000"
+	                android:textSize="18dp"
+	                android:text="Send via Email"
+	                />
+			</LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

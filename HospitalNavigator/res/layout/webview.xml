@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout 
+	    android:orientation="horizontal"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content">
+		<LinearLayout 
+		    android:orientation="horizontal"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:layout_weight="5">
+			<ImageButton 
+			    android:id="@+id/leftButton" 
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:contentDescription="Previous"
+				android:src="@drawable/blue_left" />
+			<ImageButton 
+			    android:id="@+id/rightButton" 
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:contentDescription="Next"
+				android:src="@drawable/blue_right" />
+		</LinearLayout>
+		<LinearLayout 
+		    android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="5"
+			android:gravity="right|center_vertical">
+			
+			<Button
+		      android:id="@+id/routeBack"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_margin ="5dp"
+		      android:background="@layout/bluebuttonshape"
+		      android:padding="5dp"
+		      android:text="  Back  "
+		      android:textColor="#FFFFFF"
+		      android:textSize="20dp"
+		      android:textStyle="bold"/>
+			<Button
+		      android:id="@+id/routeGo"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_margin ="5dp"
+		      android:background="@layout/greenbuttonshape"
+		      android:padding="5dp"
+		      android:text="  Go  "
+		      android:textColor="#FFFFFF"
+		      android:textSize="20dp"
+		      android:textStyle="bold"/>
+		</LinearLayout>
+	</LinearLayout>
+	
+		<LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#cccccc"
+	        android:orientation="horizontal" >
+	
+	        <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="10"
+	            android:background="#666666"
+	            android:gravity="center"
+	            android:orientation="vertical" >
+	
+	            <ImageView
+	                android:id="@+id/routeSwitch"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_margin="3dp"
+	                android:src="@drawable/switch48" />
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:orientation="vertical" >
+	
+	            <TextView
+	                android:id="@+id/routeStartText"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginBottom="5dp"
+	                android:layout_marginLeft="5dp"
+	                android:layout_marginTop="5dp"
+	                android:gravity="left"
+	                android:text="Start:"
+	                android:textColor="#000000"
+	                android:textSize="16dp"
+	                android:textStyle="bold" />
+	
+	            <TextView
+	                android:id="@+id/routeEndText"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginBottom="5dp"
+	                android:layout_marginLeft="5dp"
+	                android:gravity="left"
+	                android:text="End:"
+	                android:textColor="#000000"
+	                android:textSize="16dp"
+	                android:textStyle="bold" />
+	        </LinearLayout>
+	    </LinearLayout>   
+	<LinearLayout 
+	    android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content">
+		<TextView 
+		    android:id="@+id/stepText" 
+		    android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:background="@drawable/blue_bar"
+			android:tileMode="repeat"
+			android:textSize="8pt"
+			android:paddingLeft="5dp"
+			android:paddingTop="2dp"
+			android:paddingBottom="3dp"
+			android:textColor="#ffffffff"
+			android:text="Step:" />
+	</LinearLayout>
+	<RelativeLayout 
+	    android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_gravity="center"
+		android:background="#444444">
+		>
+		<LinearLayout 
+		    android:id="@+id/progresslayout"
+	    	android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_centerInParent="true">
+			<ProgressBar
+				android:id="@+id/webprogress"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+			</ProgressBar>
+			<TextView 
+			    android:id="@+id/webprogresstext"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Loading..."/>
+		</LinearLayout>
+		<com.cs460402.activities.NavWebView
+	    android:id="@+id/webView" 
+	    android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:visibility="invisible"
+		android:focusable="true"/>
+		
+		<Button
+	      android:id="@+id/routeFilter"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_margin ="0dp"
+	      android:layout_alignParentBottom="true"
+	      android:layout_alignParentLeft="true"
+	      android:background="@layout/cornerbuttonshape"
+	      android:padding="5dp"
+	      android:text="  Filter  "
+	      android:textColor="#FFFFFF"
+	      android:textSize="20dp"
+	      android:textStyle="bold"/>
+		
+	</RelativeLayout>
+	
+</LinearLayout>

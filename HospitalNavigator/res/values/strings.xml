@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hospital Navigator</string>
+    <string name="task_working">Working (%1$d)...</string>
+    <string name="task_working2">Working...</string>
+    <string name="task_starting">Starting...</string>
+    <string name="task_cancelled">Task is cancelled by user</string>
+    <string name="task_completed">Task is completed with result (%1$s) of type (%2$s)</string>
+    <string name="spinner_start">Choose Start Location</string>
+    <string name="spinner_byFloor">Choose Floor</string>
+    <string name="spinner_byType">Choose Location Type</string>
+    <string name="spinner_end">Choose End Location</string>
+    
+    <string name="instructionheading1"></string>
+    <string name="instructionheading2"></string>
+    <string name="instructionheading3"></string>
+    <string name="instructionheading4"></string>
+    <string name="instructionheading5"></string>
+    <string name="instructionheading6"></string>
+    <string name="instructionheading7"></string>
+    
+    <string name="instructions1">
+        Welcome to the Instructions Page. You may use the back button arrow on your device or at the bottom of the screen at any time to go back a page.</string>
+    <string name="instructions2">
+        The home page has three buttons: “View Map”, “Get Directions”, and “Instructions”.
+        \n\n 
+		The “View Map” button allows you to view the map of the hospital. It takes you to a screen where you can select your desired floor. Then, you can manually set the start and end locations by clicking on a point. To navigate the map, you can drag your finger across the screen. As you drag, the zoom arrows on the bottom right of the screen will appear.
+		\n\n
+		The “Filter” button allows you to select which point of interest icons will be displayed on the map. Clicking the “Floor” button returns you to the floor selection screen.</string>
+    <string name="instructions3">
+        The “Get Directions” button takes you to the input screen. To get directions, you must choose your start point and end point. These are displayed on the top of the screen. Pressing the green inverse button swaps the current start point and end point.
+        \n\n
+        You have four options to enter these points: “By Type”, “Searching”, “Scanning”, or manually selecting the points on the map.
+        \n\n
+        Regardless of selected option, there will be a “Clear” button on the bottom right. After selecting this button, you will need to verify that you actually want to clear both the start and end locations.</string>
+    <string name="instructions4">
+        <b>By Type:</b> Select a floor, location type (bathroom, elevator, exit, room, stairs), and the location name.
+        \n\n
+		<b>Search:</b> Type the name and it will display a list of the closest matches. You can scroll to select your start and end locations.
+		\n\n
+		<b>Scan:</b> Press the scan button to load the camera. Center the code in the frame of the camera and the application will automatically load an entire route or a pop-up will ask you whether you want to set the loaded location as a start point or end point. Note: You will need a Barcode Scanner application installed on your phone (e.g. ZXing Barcode Scanner).
+		\n\n
+		<b>Map:</b> Select start and end locations by pressing the points on either floor map. This is the same screen as “View Map”.
+		\n\n
+		Click “GO” and get your directions!</string>
+    <string name="instructions5">
+        To step through the directions, click the arrows on the top left of the screen. If you are holding your phone parallel to the ground, your current location marker will point to the direction you are facing.</string>
+    <string name="instructions6">
+        To access the Options page, click on your phone’s menu button. 
+		\n\n
+		<b>Info:</b> Takes you to the contact page on the MGH website.
+		\n\n
+		<b>Home:</b> Takes you to the home screen.
+		\n\n
+		<b>Call Help:</b> Automatically connects to an MGH staff member.
+		\n\n
+		<b>Map:</b> Takes you to the “View Map” screen.
+		\n\n
+		<b>More:</b> Share the route via a text message or email, update the application (“Sync Database”), or exit the application.</string>
+    <string name="instructions7">
+        The “Settings” button allows you to further personalize your route. You can:
+        \n\n
+        -Select points of interest displayed on the map.
+        \n\n
+        -Select elevator or stair preference.
+        \n\n
+		-Set default phone number and email address for sharing route information.
+		\n\n
+		-Customize map by changing route line color and width, location marker color, and point of interest color options.</string>
+
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cs460402.activities"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="7" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:icon="@drawable/hospital_icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+        	android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BarcodeReader"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Entry"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Home"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Instructions"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />        
+        <activity
+            android:name="WebViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="AppPreferencesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity 
+            android:name="POIprefsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity 
+            android:name="ShareRouteActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity 
+            android:name="Instructions2"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity 
+            android:name="Instructions3"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity 
+            android:name="Instructions4"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity 
+            android:name="Instructions5"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity 
+            android:name="Instructions6"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity android:name="Instructions7"></activity>
+    </application>
+
+</manifest>
